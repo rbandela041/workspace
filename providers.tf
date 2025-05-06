@@ -14,8 +14,5 @@ terraform {
 provider "aws" {
   region = var.region
 
-  assume_role {
-    role_arn = terraform.workspace == "test" ? var.test_role_arn : var.qa_role_arn
-  }
 }
 
